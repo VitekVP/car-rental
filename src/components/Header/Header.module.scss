@@ -1,0 +1,33 @@
+@import '../../styles/vars';
+
+.header {
+  padding: 20px 0;
+
+  border-bottom: 1px solid $primary-text-color;
+}
+
+.navigate {
+  display: flex;
+  gap: 40px;
+}
+
+.link {
+  padding: 2px 6px;
+  font-size: 20px;
+  font-weight: 700;
+  color: $main-text-color;
+
+  border-radius: 4px;
+
+  transition: background-color $transition-duration, color $transition-duration;
+
+  &:hover,
+  &:focus {
+    color: $primary-text-color;
+  }
+
+  &[aria-current] {
+    color: $wite-color;
+    background-color: grey;
+  }
+}
