@@ -2,11 +2,12 @@
 @import '../LoadMore/LoadMore.module.scss';
 
 .card {
+  position: relative;
+
   flex-basis: calc((100% - 90px) / 4);
 }
 
 .thumb {
-  // width: 274px;
   height: 268px;
 
   border-radius: 14px;
@@ -19,8 +20,86 @@
   object-fit: cover;
 }
 
+.icon {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  width: 20px;
+  height: 20px;
+
+  fill: $wite-color;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 14px 0 8px;
+}
+
+.infoItem {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: calc(24 / 16);
+  color: $main-text-color;
+}
+
+.infoItem > span {
+  color: $main-blu-color;
+}
+
+.location {
+  margin-bottom: 4px;
+
+  display: flex;
+  gap: 12px;
+
+  overflow: hidden;
+}
+
+.locationItem {
+  position: relative;
+}
+
+.locationItem:not(:last-child)::after {
+  position: absolute;
+  top: 0;
+  right: -6px;
+
+  content: '';
+  width: 0px;
+  height: 16px;
+
+  border: 1px solid rgba(18, 20, 23, 0.1);
+}
+
+.description {
+  @extend .location;
+
+  margin-bottom: 28px;
+  max-height: 18px;
+}
+
+.descriptionItem {
+  @extend .locationItem;
+}
+
+.descriptionItem:not(:last-child)::after {
+  position: absolute;
+  top: 0;
+  right: -6px;
+
+  content: '';
+  width: 0px;
+  height: 16px;
+
+  border: 1px solid rgba(18, 20, 23, 0.1);
+}
+
 .btn {
   @extend .btn;
+
   width: 100%;
   height: 44px;
 
