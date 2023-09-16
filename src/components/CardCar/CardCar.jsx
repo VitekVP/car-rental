@@ -1,9 +1,9 @@
-// import { AiFillHeart } from 'react-icons/ai';
+import { AiFillHeart } from 'react-icons/ai';
 import { AiOutlineHeart } from 'react-icons/ai';
 
 import styles from './CardCars.module.scss';
 
-const CardCar = ({ car }) => {
+const CardCar = ({ car, addToFavorites }) => {
   const {
     make,
     model,
@@ -22,7 +22,11 @@ const CardCar = ({ car }) => {
       <div className={styles.thumb}>
         <img src={img} alt={make} />
       </div>
-      <AiOutlineHeart className={styles.icon} />
+      <AiOutlineHeart
+        className={styles.icon}
+        onClick={() => addToFavorites(car)}
+      />
+
       <ul className={styles.info}>
         <li className={styles.infoItem}>
           {make.slice(0, 9)} <span>{model.slice(0, 9)}</span>, {year}
