@@ -1,0 +1,61 @@
+@import '../styles/vars';
+
+.wrapper {
+  padding: 30px 0;
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 600;
+  color: $main-text-color;
+}
+
+.title {
+  @extend .text;
+
+  margin-bottom: 30px;
+
+  text-align: center;
+
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.subtitle {
+  @extend .text;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.list {
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 152px;
+  height: 44px;
+
+  margin: 0 auto;
+
+  font-size: 20px;
+  font-weight: 600;
+  color: $wite-color;
+
+  background-color: $main-blu-color;
+  border-radius: 42px;
+
+  cursor: pointer;
+
+  transition: background-color $transition-duration;
+
+  &:hover,
+  &:focus {
+    background-color: $hover-blu-color;
+  }
+}
