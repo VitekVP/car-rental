@@ -1,27 +1,14 @@
-import { useEffect, useState } from 'react';
+import CardCar from 'components/CardCar/CardCar';
 
-import Container from 'components/Shared/Container/Container';
+import styles from './CarsList.module.scss';
 
-import { getCars } from 'Api';
-
-const CarsList = () => {
-  const [cars, setCars] = useState([]);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    getCars()
-      .then(res => {
-        console.log(res);
-        setCars(res);
-      })
-      .catch(error => setError(error.toJson()));
-  }, []);
-  //   console.log(cars);
-
+const CarsList = ({ data }) => {
   return (
-    <section className="">
-      <Container></Container>
-    </section>
+    <ul className={styles.list}>
+      {data.map(item => (
+        <CardCar key={item.id} car={item} />
+      ))}
+    </ul>
   );
 };
 export default CarsList;

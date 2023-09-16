@@ -5,7 +5,7 @@ import styles from './Loader.module.scss';
 const Loader = () => {
   return (
     <div className={styles.loaderWrapper}>
-      <RotatingLines strokeColor="teal" width="96" />
+      <RotatingLines strokeColor="grey" width="96" />
     </div>
   );
 };
