@@ -4,9 +4,9 @@ import CardCar from 'components/CardCar/CardCar';
 
 import styles from './CarsList.module.scss';
 
-const CarsList = ({ data }) => {
+const CarsList = ({ data, changeFavorit }) => {
   const [favorit, setFavorit] = useState(
-    () => JSON.parse(window.localStorage.getItem('favorites')) ?? []
+    JSON.parse(window.localStorage.getItem('favorites')) ?? []
   );
 
   useEffect(() => {
@@ -17,8 +17,12 @@ const CarsList = ({ data }) => {
     setFavorit(prev => [...prev, car]);
   };
 
-  const handleDeleteFromFavorites = () => {
-    setFavorit();
+  const handleIsFavorites = id => favorit.some(item => item.id === id);
+
+  const handleDeleteFromFavorites = id => {
+    setFavorit(prev => prev.filter(item => item.id !== id));
+    const newFavorites = favorit.filter(item => item.id !== id);
+    changeFavorit(newFavorites);
   };
 
   console.log(favorit);
@@ -30,6 +34,8 @@ const CarsList = ({ data }) => {
           key={item.id}
           car={item}
           addToFavorites={handleAddToFavorites}
+          removeFromFavorites={handleDeleteFromFavorites}
+          isFavorite={handleIsFavorites(item.id)}
         />
       ))}
     </ul>

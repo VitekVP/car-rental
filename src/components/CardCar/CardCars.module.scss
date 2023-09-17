@@ -20,7 +20,7 @@
   object-fit: cover;
 }
 
-.icon {
+.iconAdd {
   position: absolute;
   top: 14px;
   right: 14px;
@@ -29,6 +29,14 @@
   height: 20px;
 
   fill: $wite-color;
+
+  cursor: pointer;
+}
+
+.iconRemove {
+  @extend .iconAdd;
+
+  fill: $main-blu-color;
 }
 
 .info {

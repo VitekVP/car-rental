@@ -3,8 +3,9 @@ import { AiOutlineHeart } from 'react-icons/ai';
 
 import styles from './CardCars.module.scss';
 
-const CardCar = ({ car, addToFavorites }) => {
+const CardCar = ({ car, addToFavorites, removeFromFavorites, isFavorite }) => {
   const {
+    id,
     make,
     model,
     img,
@@ -17,15 +18,24 @@ const CardCar = ({ car, addToFavorites }) => {
     functionalities,
   } = car;
 
+  console.log(isFavorite);
+
   return (
     <li className={styles.card}>
       <div className={styles.thumb}>
         <img src={img} alt={make} />
       </div>
-      <AiOutlineHeart
-        className={styles.icon}
-        onClick={() => addToFavorites(car)}
-      />
+      {isFavorite ? (
+        <AiFillHeart
+          className={styles.iconRemove}
+          onClick={() => removeFromFavorites(id)}
+        />
+      ) : (
+        <AiOutlineHeart
+          className={styles.iconAdd}
+          onClick={() => addToFavorites(car)}
+        />
+      )}
 
       <ul className={styles.info}>
         <li className={styles.infoItem}>

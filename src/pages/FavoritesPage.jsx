@@ -1,23 +1,27 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import Container from 'components/Shared/Container/Container';
-import CardCar from 'components/CardCar/CardCar';
 
 import styles from './FavoritesPage.module.scss';
+import CarsList from 'components/CarsList/CarsList';
 
 const FavoritesPage = () => {
-  const [favorit] = useState(
-    () => JSON.parse(window.localStorage.getItem('favorites')) ?? []
+  const [favorit, setFavorit] = useState(
+    JSON.parse(window.localStorage.getItem('favorites')) ?? []
   );
+
+  useEffect(() => {
+    window.localStorage.setItem('favorites', JSON.stringify(favorit));
+  }, [favorit]);
+
+  const handleChangeFavorites = newFavorites => {
+    setFavorit(newFavorites);
+  };
 
   return (
     <section className={styles.wrapper}>
       <Container>
-        <ul className={styles.list}>
-          {favorit.map(item => (
-            <CardCar key={item.id} car={item} />
-          ))}
-        </ul>
+        <CarsList data={favorit} changeFavorit={handleChangeFavorites} />
       </Container>
     </section>
   );
