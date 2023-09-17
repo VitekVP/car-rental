@@ -4,6 +4,7 @@ import Container from 'components/Shared/Container/Container';
 
 import styles from './FavoritesPage.module.scss';
 import CarsList from 'components/CarsList/CarsList';
+import Plaсeholder from 'components/Plaсeholder/Plaсeholder';
 
 const FavoritesPage = () => {
   const [favorit, setFavorit] = useState(
@@ -18,12 +19,14 @@ const FavoritesPage = () => {
     setFavorit(newFavorites);
   };
 
-  return (
+  return favorit.length !== 0 ? (
     <section className={styles.wrapper}>
       <Container>
         <CarsList data={favorit} changeFavorit={handleChangeFavorites} />
       </Container>
     </section>
+  ) : (
+    <Plaсeholder />
   );
 };
 
