@@ -8,14 +8,14 @@ import styles from './SharedLayout.module.scss';
 
 const SharedLayout = () => {
   return (
-    <div className={styles.wrapper}>
+    <>
       <Header />
       <main className={styles.main}>
         <Suspense fallback={<Loader />}>
           <Outlet />
         </Suspense>
       </main>
-    </div>
+    </>
   );
 };
 export default SharedLayout;

@@ -9,7 +9,6 @@ import SharedLayout from 'components/SharedLayout/SharedLayout';
 const HomePage = lazy(() => import('../pages/HomePage'));
 const CatalogPage = lazy(() => import('../pages/CatalogPage'));
 const FavoritesPage = lazy(() => import('../pages/FavoritesPage'));
-const ErrorPage = lazy(() => import('../pages/ErrorPage'));
 
 const App = () => {
   return (
@@ -19,7 +18,7 @@ const App = () => {
           <Route index element={<HomePage />} />
           <Route path="/catalog" element={<CatalogPage />} />
           <Route path="/favorites" element={<FavoritesPage />} />
-          <Route path="*" element={<ErrorPage />} />
+          <Route path="*" element={<HomePage />} />
         </Route>
       </Routes>
       <ToastContainer theme="colored" autoClose={3000} position="top-center" />

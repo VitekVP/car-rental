@@ -8,7 +8,7 @@ const HomePage = () => {
   return (
     <section className={styles.wrapper}>
       <Container>
-        <h1 className={styles.title}>Welcome to our car rental homepage!</h1>
+        <h1 className={styles.title}>Welcome to MVrent!</h1>
         <h2 className={styles.subtitle}>Car Rental, Your Way!</h2>
         <p className={styles.text}>
           Choose from a wide car selection. Flexible rental terms, no hidden
@@ -22,11 +22,10 @@ const HomePage = () => {
         </ul>
         <h2 className={styles.subtitle}>Book now and hit the road with us!</h2>
         <Link to="/catalog" className={styles.link}>
-          GO!
+          Let's go!!!
         </Link>
       </Container>
     </section>
   );
 };
-
 export default HomePage;

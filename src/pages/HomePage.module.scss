@@ -1,31 +1,36 @@
 @import '../styles/vars';
 
 .wrapper {
-  padding: 30px 0;
+  padding: 50px 0;
+  min-height: 100vh;
+
+  background-image: url('../images/girl.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .text {
-  font-size: 16px;
-  font-weight: 600;
-  color: $main-text-color;
+  font-size: 20px;
+  font-weight: 700;
+  color: #10106f;
 }
 
 .title {
   @extend .text;
 
-  margin-bottom: 30px;
+  margin-bottom: 180px;
 
   text-align: center;
 
-  font-size: 32px;
+  font-size: 42px;
   font-weight: 700;
 }
 
 .subtitle {
   @extend .text;
 
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 28px;
 }
 
 .list {
@@ -38,10 +43,10 @@
   justify-content: center;
   align-items: center;
 
-  width: 152px;
+  width: 252px;
   height: 44px;
 
-  margin: 0 auto;
+  margin: 100px auto 0;
 
   font-size: 20px;
   font-weight: 600;

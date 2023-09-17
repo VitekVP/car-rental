@@ -4,6 +4,8 @@
   padding: 20px 0;
 
   border-bottom: 1px solid $primary-text-color;
+
+  background-color: $bgc-color;
 }
 
 .navigate {
@@ -12,22 +14,22 @@
 }
 
 .link {
-  padding: 2px 6px;
+  padding: 6px 10px;
   font-size: 20px;
   font-weight: 700;
   color: $main-text-color;
 
-  border-radius: 4px;
+  border-radius: 42px;
 
   transition: background-color $transition-duration, color $transition-duration;
 
   &:hover,
   &:focus {
-    color: $primary-text-color;
+    color: $second-bgc-color;
   }
 
   &[aria-current] {
     color: $wite-color;
-    background-color: grey;
+    background-color: rgb(62, 61, 61);
   }
 }
