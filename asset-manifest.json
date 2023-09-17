@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/car-rental/static/css/main.8a5a4d85.css",
-    "main.js": "/car-rental/static/js/main.e661c817.js",
-    "static/css/112.59096684.chunk.css": "/car-rental/static/css/112.59096684.chunk.css",
+    "main.js": "/car-rental/static/js/main.6af76949.js",
+    "static/css/112.7099dbeb.chunk.css": "/car-rental/static/css/112.7099dbeb.chunk.css",
     "static/js/112.6fa866a7.chunk.js": "/car-rental/static/js/112.6fa866a7.chunk.js",
     "static/css/889.13cbc891.chunk.css": "/car-rental/static/css/889.13cbc891.chunk.css",
-    "static/js/889.c3ab555f.chunk.js": "/car-rental/static/js/889.c3ab555f.chunk.js",
+    "static/js/889.4ba0a9ab.chunk.js": "/car-rental/static/js/889.4ba0a9ab.chunk.js",
     "static/css/460.b592ac99.chunk.css": "/car-rental/static/css/460.b592ac99.chunk.css",
     "static/js/460.4c1675bc.chunk.js": "/car-rental/static/js/460.4c1675bc.chunk.js",
     "static/js/134.d265f7a7.chunk.js": "/car-rental/static/js/134.d265f7a7.chunk.js",
@@ -14,11 +14,11 @@
     "static/media/logo.png": "/car-rental/static/media/logo.a97ea9793e66e13b6201.png",
     "index.html": "/car-rental/index.html",
     "main.8a5a4d85.css.map": "/car-rental/static/css/main.8a5a4d85.css.map",
-    "main.e661c817.js.map": "/car-rental/static/js/main.e661c817.js.map",
-    "112.59096684.chunk.css.map": "/car-rental/static/css/112.59096684.chunk.css.map",
+    "main.6af76949.js.map": "/car-rental/static/js/main.6af76949.js.map",
+    "112.7099dbeb.chunk.css.map": "/car-rental/static/css/112.7099dbeb.chunk.css.map",
     "112.6fa866a7.chunk.js.map": "/car-rental/static/js/112.6fa866a7.chunk.js.map",
     "889.13cbc891.chunk.css.map": "/car-rental/static/css/889.13cbc891.chunk.css.map",
-    "889.c3ab555f.chunk.js.map": "/car-rental/static/js/889.c3ab555f.chunk.js.map",
+    "889.4ba0a9ab.chunk.js.map": "/car-rental/static/js/889.4ba0a9ab.chunk.js.map",
     "460.b592ac99.chunk.css.map": "/car-rental/static/css/460.b592ac99.chunk.css.map",
     "460.4c1675bc.chunk.js.map": "/car-rental/static/js/460.4c1675bc.chunk.js.map",
     "134.d265f7a7.chunk.js.map": "/car-rental/static/js/134.d265f7a7.chunk.js.map",
@@ -26,6 +26,6 @@
   },
   "entrypoints": [
     "static/css/main.8a5a4d85.css",
-    "static/js/main.e661c817.js"
+    "static/js/main.6af76949.js"
   ]
 }
