@@ -3,7 +3,13 @@ import { AiOutlineHeart } from 'react-icons/ai';
 
 import styles from './CardCars.module.scss';
 
-const CardCar = ({ car, addToFavorites, removeFromFavorites, isFavorite }) => {
+const CardCar = ({
+  car,
+  addToFavorites,
+  removeFromFavorites,
+  isFavorite,
+  toggleModal,
+}) => {
   const {
     id,
     make,
@@ -17,8 +23,6 @@ const CardCar = ({ car, addToFavorites, removeFromFavorites, isFavorite }) => {
     mileage,
     functionalities,
   } = car;
-
-  console.log(isFavorite);
 
   return (
     <li className={styles.card}>
@@ -39,26 +43,44 @@ const CardCar = ({ car, addToFavorites, removeFromFavorites, isFavorite }) => {
 
       <ul className={styles.info}>
         <li className={styles.infoItem}>
-          {make.slice(0, 9)} <span>{model.slice(0, 9)}</span>, {year}
+          <p>
+            {make.slice(0, 9)} <span>{model.slice(0, 9)}</span>, {year}
+          </p>
         </li>
-        <li className={styles.infoItem}>{rentalPrice}</li>
+        <li className={styles.infoItem}>
+          <p>{rentalPrice}</p>
+        </li>
       </ul>
       <ul className={styles.location}>
         <li className={styles.locationItem}>
-          {address.split(' ')[3].replace(',', '')}
+          <p>{address.split(' ')[3].replace(',', '')}</p>
         </li>
-        <li className={styles.locationItem}>{address.split(' ').slice(-1)}</li>
-        <li className={styles.locationItem}>{rentalCompany}</li>
+        <li className={styles.locationItem}>
+          <p>{address.split(' ').slice(-1)}</p>
+        </li>
+        <li className={styles.locationItem}>
+          <p>{rentalCompany}</p>
+        </li>
       </ul>
       <ul className={styles.description}>
-        <li className={styles.descriptionItem}>{type}</li>
-        <li className={styles.descriptionItem}>{model}</li>
-        <li className={styles.descriptionItem}>{mileage}</li>
         <li className={styles.descriptionItem}>
-          {functionalities[0].slice(0, 21)}
+          <p>{type}</p>
+        </li>
+        <li className={styles.descriptionItem}>
+          <p>{model}</p>
+        </li>
+        <li className={styles.descriptionItem}>
+          <p>{mileage}</p>
+        </li>
+        <li className={styles.descriptionItem}>
+          <p>{functionalities[0].slice(0, 21)}</p>
         </li>
       </ul>
-      <button type="button" className={styles.btn}>
+      <button
+        type="button"
+        className={styles.btn}
+        onClick={() => toggleModal(car)}
+      >
         Learn more
       </button>
     </li>

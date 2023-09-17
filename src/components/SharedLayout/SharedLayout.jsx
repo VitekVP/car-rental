@@ -6,7 +6,7 @@ import Loader from 'components/Shared/Loader/Loader';
 
 import styles from './SharedLayout.module.scss';
 
-export const SharedLayout = () => {
+const SharedLayout = () => {
   return (
     <div className={styles.wrapper}>
       <Header />
@@ -18,3 +18,4 @@ export const SharedLayout = () => {
     </div>
   );
 };
+export default SharedLayout;

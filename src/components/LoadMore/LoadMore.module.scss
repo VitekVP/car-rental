@@ -1,28 +1,24 @@
 @import '../../styles/vars';
 
 .btn {
-  width: 140px;
-  height: 36px;
   margin: 0 auto;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
 
   font-size: 16px;
   font-weight: 500;
   line-height: calc(24 / 16);
-  color: $wite-color;
+  text-decoration: underline;
+  color: $main-blu-color;
 
-  border-radius: 12px;
   border: none;
 
-  background-color: $main-blu-color;
+  background-color: transparent;
 
-  transition: background-color $transition-duration;
+  transition: color $transition-duration;
 
   &:hover,
   &:focus {
-    background-color: $hover-blu-color;
+    color: $hover-blu-color;
   }
 }

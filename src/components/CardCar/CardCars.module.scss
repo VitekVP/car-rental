@@ -31,6 +31,13 @@
   fill: $wite-color;
 
   cursor: pointer;
+
+  transition: fill $transition-duration;
+
+  &:hover,
+  &:focus {
+    fill: $hover-blu-color;
+  }
 }
 
 .iconRemove {
@@ -53,7 +60,7 @@
   color: $main-text-color;
 }
 
-.infoItem > span {
+.infoItem > p > span {
   color: $main-blu-color;
 }
 
@@ -106,12 +113,28 @@
 }
 
 .btn {
-  @extend .btn;
-
   width: 100%;
   height: 44px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   font-size: 14px;
   font-weight: 600;
   line-height: calc(20 / 14);
+  color: $wite-color;
+
+  border-radius: 12px;
+  border: none;
+
+  background-color: $main-blu-color;
+
+  transition: background-color $transition-duration;
+
+  &:hover,
+  &:focus {
+    background-color: $hover-blu-color;
+  }
 }
