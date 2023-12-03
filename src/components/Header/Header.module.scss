@@ -1,11 +1,57 @@
 @import '../../styles/vars';
 
 .header {
-  padding: 20px 0;
+  position: fixed;
+  left: 0;
+  right: 0;
 
-  border-bottom: 1px solid $primary-text-color;
+  z-index: 1000;
 
-  background-color: $bgc-color;
+  padding: 10px 0;
+
+  border-bottom: 2px solid $bgc-color;
+
+  background: rgb(238, 189, 71);
+  background: radial-gradient(
+    circle,
+    rgba(238, 189, 71, 1) 10%,
+    rgba(238, 238, 56, 1) 50%,
+    rgba(224, 154, 14, 1) 100%
+  );
+}
+
+// .header::after {
+//   content: '';
+
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+
+//   display: block;
+
+//   height: 2px;
+//   width: 90%;
+//   margin: 0 auto;
+
+//   background-color: $bgc-color;
+// }
+
+.box {
+  margin-left: 50px;
+
+  display: flex;
+  gap: 100px;
+  align-items: center;
+}
+
+.logo {
+  transition: scale $transition-duration;
+
+  &:hover,
+  &:focus {
+    scale: 1.2;
+  }
 }
 
 .navigate {

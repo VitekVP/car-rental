@@ -1,6 +1,7 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 import Container from 'components/Shared/Container/Container';
+import Logo from 'components/Logo/Logo';
 
 import styles from './Header.module.scss';
 
@@ -14,17 +15,23 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <Container>
-        <nav>
-          <ul className={styles.navigate}>
-            {data.map(({ href, text }) => (
-              <li key={text}>
-                <NavLink to={`/${href}`} className={styles.link}>
-                  {text}
-                </NavLink>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <div className={styles.box}>
+          <Link to="/" className={styles.logo}>
+            <Logo />
+          </Link>
+
+          <nav>
+            <ul className={styles.navigate}>
+              {data.map(({ href, text }) => (
+                <li key={text}>
+                  <NavLink to={`/${href}`} className={styles.link}>
+                    {text}
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
       </Container>
     </header>
   );
