@@ -26,9 +26,14 @@ const CardCar = ({
 
   return (
     <li className={styles.card}>
-      <div className={styles.thumb}>
-        <img src={img} alt={make} />
-      </div>
+      <img
+        src={img}
+        alt={make}
+        width="274"
+        height="268"
+        className={styles.foto}
+      />
+
       {isFavorite ? (
         <AiFillHeart
           className={styles.iconRemove}

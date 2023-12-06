@@ -5,11 +5,23 @@ import Container from 'components/Shared/Container/Container';
 import styles from './HomePage.module.scss';
 
 const HomePage = () => {
+  const dataСonditions = [
+    { text: 'wide selection of cars' },
+    { text: 'flexible rental terms' },
+    { text: 'transparent conditions' },
+    { text: 'top-notch service' },
+  ];
+
+  const dataActions = [{ text: '' }, { text: '' }, { text: '' }, { text: '' }];
+
   return (
     <section className={styles.wrapper}>
       <Container>
         <h1 className={styles.title}>Welcome to MVrent!</h1>
-        <h2 className={styles.subtitle}>Car Rental, Your Way!</h2>
+        <div className="">
+          <h2></h2>
+        </div>
+
         <p className={styles.text}>
           Choose from a wide car selection. Flexible rental terms, no hidden
           fees. Top-notch service, always ready to help.

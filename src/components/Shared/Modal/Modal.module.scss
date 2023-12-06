@@ -11,12 +11,13 @@
 
   overflow-y: scroll;
 
+  background-color: #12141780;
   backdrop-filter: blur(4px);
 }
 
 .modal {
   position: absolute;
-  top: 65%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 

@@ -24,9 +24,14 @@ const CarModal = ({ car, toggleModal }) => {
   return (
     <div className={styles.wrapper}>
       <AiOutlineClose className={styles.iconClose} onClick={toggleModal} />
-      <div className={styles.thumb}>
-        <img src={img} alt={make} />
-      </div>
+      <img
+        src={img}
+        alt={make}
+        width="461"
+        height="248"
+        className={styles.foto}
+      />
+
       <h3 className={styles.info}>
         {make} <span>{model}</span>, {year}
       </h3>
@@ -56,9 +61,8 @@ const CarModal = ({ car, toggleModal }) => {
           <p>EngineSize:{engineSize}</p>
         </li>
       </ul>
-      <p className={styles.description}>
-        <p>{description.slice(0, 121)}</p>
-      </p>
+      <p className={styles.description}>{description}</p>
+      {/* <p className={styles.description}>{description.slice(0, 121)}</p> */}
       <h4 className={styles.subtitle}>Accessories and functionalities:</h4>
       <ul className={styles.accessories}>
         {accessories.map(item => (
@@ -85,10 +89,11 @@ const CarModal = ({ car, toggleModal }) => {
         <p className={styles.condition}>{rentalConditions.split('\n')[1]}</p>
         <p className={styles.condition}>{rentalConditions.split('\n')[2]}</p>
         <p className={styles.condition}>
-          Mileage:<span>{(mileage / 1000).toFixed(3).replace('.', ',')}</span>
+          Mileage: <span>{mileage.toLocaleString('en-US')}</span>
+          {/* <span>{(mileage / 1000).toFixed(3).replace('.', ',')}</span> */}
         </p>
         <p className={styles.condition}>
-          Price:<span>{rentalPrice}</span>
+          Price: <span>{rentalPrice}</span>
         </p>
       </div>
       <a href="tel:+380730000000" className={styles.link}>

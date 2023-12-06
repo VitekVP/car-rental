@@ -1,0 +1,27 @@
+@import '../../styles/vars';
+
+.footer {
+  padding: 5px 0;
+
+  border-top: 2px solid $bgc-color;
+
+  background: rgb(238, 189, 71);
+  background: radial-gradient(
+    circle,
+    rgba(238, 189, 71, 1) 10%,
+    rgba(238, 238, 56, 1) 50%,
+    rgba(224, 154, 14, 1) 100%
+  );
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sign {
+  text-align: center;
+
+  font-weight: 700;
+}

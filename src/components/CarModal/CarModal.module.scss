@@ -31,18 +31,12 @@
   }
 }
 
-.thumb {
-  width: 461px;
-  height: 248px;
+.foto {
+  // height: 268px;
 
   border-radius: 14px;
 
-  overflow: hidden;
-}
-
-.thumb > img {
-  height: 100%;
-  width: 100%;
+  object-fit: cover;
 }
 
 .info {
@@ -117,9 +111,12 @@
 .description {
   @extend .subtitle;
 
+  height: 40px;
   margin-bottom: 24px;
 
   font-weight: 400;
+
+  overflow: hidden;
 }
 
 .accessories {
@@ -194,6 +191,8 @@
 }
 
 .condition > span {
+  margin-left: 2px;
+
   font-weight: 600;
 
   color: $main-blu-color;

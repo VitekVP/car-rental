@@ -6,16 +6,11 @@
   flex-basis: calc((100% - 90px) / 4);
 }
 
-.thumb {
-  height: 268px;
+.foto {
+  // height: 268px;
 
   border-radius: 14px;
 
-  overflow: hidden;
-}
-
-.thumb > img {
-  height: 100%;
   object-fit: cover;
 }
 
