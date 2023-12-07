@@ -1,6 +1,5 @@
-import { Link } from 'react-router-dom';
-
 import Container from 'components/Shared/Container/Container';
+import LinkToCatalog from 'components/Shared/LinkTocatalog/LinkToCatalog';
 
 import styles from './HomePage.module.scss';
 
@@ -44,9 +43,7 @@ const HomePage = () => {
               ))}
             </ul>
           </div>
-          <Link to="/catalog" className={styles.link}>
-            Select car!!!
-          </Link>
+          <LinkToCatalog />
         </div>
       </Container>
     </section>
