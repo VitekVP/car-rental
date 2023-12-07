@@ -1,6 +1,8 @@
 @import '../styles/vars';
 
 .wrapper {
+  position: relative;
+
   padding: 100px 0;
   min-height: 100vh;
 
@@ -10,36 +12,89 @@
   // background-attachment: fixed;
 }
 
-.text {
-  width: 75vw;
+.boxContainer {
+  height: 100vh;
 
-  font-size: 20px;
-  font-weight: 700;
-  color: #10106f;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .title {
-  @extend .text;
-
   margin-bottom: 150px;
 
   text-align: center;
 
-  font-size: 42px;
-  font-weight: 700;
+  font-size: 46px;
+  font-weight: 800;
 
-  background-color: transparent;
+  background-image: linear-gradient(
+    93deg,
+    rgba(12, 12, 13, 1) 25%,
+    rgba(72, 74, 8, 1) 90%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .subtitle {
-  @extend .text;
+  text-align: center;
+  text-decoration: underline;
 
-  font-size: 28px;
+  font-size: 32px;
+  font-weight: 800;
+  color: $main-text-color;
 }
 
-.list {
-  padding-left: 10px;
-  margin-bottom: 10px;
+.boxLeft {
+  position: absolute;
+  top: 400px;
+  left: 100px;
+
+  width: 300px;
+  padding: 8px;
+
+  border-radius: 4px;
+
+  // background-color: $fone-color;
+
+  box-shadow: 0px 0px 14px -1px rgba(0, 0, 0, 0.75);
+}
+
+.boxRight {
+  position: absolute;
+  top: 500px;
+  right: 150px;
+
+  width: 300px;
+  padding: 8px;
+
+  border-radius: 4px;
+
+  box-shadow: 0px 0px 14px -1px rgba(0, 0, 0, 0.75);
+}
+
+.text {
+  font-size: 26px;
+  font-weight: 500;
+  color: $main-text-color;
+
+  &::before {
+    content: '';
+    display: inline-block;
+
+    width: 8px;
+    height: 8px;
+    margin-right: 4px;
+
+    border-radius: 50%;
+
+    background-color: $main-text-color;
+
+    transform: translateY(-25%);
+  }
 }
 
 .link {
@@ -51,8 +106,6 @@
 
   width: 252px;
   height: 44px;
-
-  margin: 40px auto 0;
 
   font-size: 20px;
   font-weight: 600;
@@ -66,11 +119,6 @@
   overflow: hidden;
 
   transition: background-color $transition-duration;
-
-  // &:hover,
-  // &:focus {
-  //   background-color: $hover-blu-color;
-  // }
 
   &::before {
     content: '';

@@ -12,30 +12,42 @@ const HomePage = () => {
     { text: 'top-notch service' },
   ];
 
-  const dataActions = [{ text: '' }, { text: '' }, { text: '' }, { text: '' }];
+  const dataActions = [
+    { text: 'Pick your car' },
+    { text: 'Make a reservation' },
+    { text: 'Get your car' },
+    { text: 'Enjoy your ride' },
+  ];
 
   return (
     <section className={styles.wrapper}>
       <Container>
-        <h1 className={styles.title}>Welcome to MVrent!</h1>
-        <div className="">
-          <h2></h2>
+        <div className={styles.boxContainer}>
+          <h1 className={styles.title}>MVrent - сar rental</h1>
+          <div className={styles.boxLeft}>
+            <h2 className={styles.subtitle}>We offer:</h2>
+            <ul>
+              {dataСonditions.map(({ text }) => (
+                <li key={text} className={styles.listItem}>
+                  <p className={styles.text}>{text}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className={styles.boxRight}>
+            <h2 className={styles.subtitle}>It's simple:</h2>
+            <ul className={styles.list}>
+              {dataActions.map(({ text }) => (
+                <li key={text} className={styles.listItem}>
+                  <p className={styles.text}>{text}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <Link to="/catalog" className={styles.link}>
+            Select car!!!
+          </Link>
         </div>
-
-        <p className={styles.text}>
-          Choose from a wide car selection. Flexible rental terms, no hidden
-          fees. Top-notch service, always ready to help.
-        </p>
-        <ul className={styles.list}>
-          <li className={styles.text}>1 - Pick your car.</li>
-          <li className={styles.text}>2 - Book online.</li>
-          <li className={styles.text}>3 - Get your car.</li>
-          <li className={styles.text}>4 - Enjoy your ride.</li>
-        </ul>
-        <h2 className={styles.subtitle}>Book now and hit the road with us!</h2>
-        <Link to="/catalog" className={styles.link}>
-          Let's go!!!
-        </Link>
       </Container>
     </section>
   );
