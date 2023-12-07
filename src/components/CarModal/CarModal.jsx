@@ -24,14 +24,7 @@ const CarModal = ({ car, toggleModal }) => {
   return (
     <div className={styles.wrapper}>
       <AiOutlineClose className={styles.iconClose} onClick={toggleModal} />
-      <img
-        src={img}
-        alt={make}
-        width="461"
-        height="248"
-        className={styles.foto}
-      />
-
+      <img src={img} alt={make} className={styles.foto} />
       <h3 className={styles.info}>
         {make} <span>{model}</span>, {year}
       </h3>

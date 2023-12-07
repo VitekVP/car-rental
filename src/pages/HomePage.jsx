@@ -27,7 +27,7 @@ const HomePage = () => {
             <h2 className={styles.subtitle}>We offer:</h2>
             <ul>
               {dataСonditions.map(({ text }) => (
-                <li key={text} className={styles.listItem}>
+                <li key={text}>
                   <p className={styles.text}>{text}</p>
                 </li>
               ))}
@@ -37,7 +37,7 @@ const HomePage = () => {
             <h2 className={styles.subtitle}>It's simple:</h2>
             <ul className={styles.list}>
               {dataActions.map(({ text }) => (
-                <li key={text} className={styles.listItem}>
+                <li key={text}>
                   <p className={styles.text}>{text}</p>
                 </li>
               ))}
