@@ -3,6 +3,8 @@ import { NavLink, Link } from 'react-router-dom';
 import Container from 'components/Shared/Container/Container';
 import Logo from 'components/Logo/Logo';
 
+import { FaPhoneVolume } from 'react-icons/fa';
+
 import styles from './Header.module.scss';
 
 const Header = () => {
@@ -19,7 +21,6 @@ const Header = () => {
           <Link to="/" className={styles.logo}>
             <Logo />
           </Link>
-
           <nav>
             <ul className={styles.navigate}>
               {data.map(({ href, text }) => (
@@ -31,6 +32,10 @@ const Header = () => {
               ))}
             </ul>
           </nav>
+          <div className={styles.boxPhone}>
+            <FaPhoneVolume size={28} className={styles.icon} />
+            <p className={styles.phone}>+380970000000</p>
+          </div>
         </div>
       </Container>
     </header>

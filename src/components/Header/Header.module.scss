@@ -20,28 +20,11 @@
   );
 }
 
-// .header::after {
-//   content: '';
-
-//   position: absolute;
-//   bottom: 0;
-//   left: 0;
-//   right: 0;
-
-//   display: block;
-
-//   height: 2px;
-//   width: 90%;
-//   margin: 0 auto;
-
-//   background-color: $bgc-color;
-// }
-
 .box {
   margin-left: 50px;
 
   display: flex;
-  gap: 100px;
+  gap: 150px;
   align-items: center;
 }
 
@@ -56,7 +39,7 @@
 
 .navigate {
   display: flex;
-  gap: 40px;
+  gap: 50px;
 }
 
 .link {
@@ -82,4 +65,42 @@
     color: $wite-color;
     border-color: $wite-color;
   }
+}
+
+.boxPhone {
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  // transform: scale(1);
+
+  // transition: transform $transition-duration;
+
+  // &:hover {
+  //   transform: scale(1.2);
+  // }
+
+  &:hover .icon {
+    fill: $wite-color;
+  }
+
+  &:hover .phone {
+    color: $wite-color;
+  }
+}
+
+.icon {
+  fill: $main-text-color;
+
+  transition: fill $transition-duration;
+}
+
+.phone {
+  font-size: 18px;
+  font-weight: 700;
+  color: $main-text-color;
+
+  transition: color $transition-duration;
 }
