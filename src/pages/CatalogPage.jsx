@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 
 import Container from 'components/Shared/Container/Container';
+import SideBar from 'components/SideBar/SideBar';
 import CarsList from 'components/CarsList/CarsList';
 import LoadMore from 'components/LoadMore/LoadMore';
 import Loader from 'components/Shared/Loader/Loader';
@@ -16,6 +17,7 @@ const CatalogPage = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [page, setPage] = useState(1);
+  const [filter, setFilter] = useState('');
 
   useEffect(() => {
     const allCars = async () => {
@@ -90,10 +92,24 @@ const CatalogPage = () => {
   const quantityPage = Math.ceil(totalCars / 8);
   const isLoadMore = quantityPage - page;
 
+  const changeFilter = event => {
+    setFilter(event.target.value);
+  };
+
+  const getVisibleCar = () => {
+    const normalizedFilter = filter.toLowerCase().trim();
+    return cars.filter(car =>
+      car.make.toLowerCase().includes(normalizedFilter)
+    );
+  };
+
+  const visibleCar = getVisibleCar();
+
   return (
     <section className={styles.wrapper}>
       <Container>
-        {loading ? <Loader /> : <CarsList data={cars} />}
+        <SideBar changeFilter={changeFilter} filter={filter} />
+        {loading ? <Loader /> : <CarsList data={visibleCar} />}
         {isLoadMore && <LoadMore clickBtn={handleLoadMore} />}
       </Container>
     </section>
